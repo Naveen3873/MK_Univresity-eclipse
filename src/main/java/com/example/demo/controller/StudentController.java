@@ -22,7 +22,7 @@ public class StudentController {
 	public StudentRepository StudentRepo;
 	
 	@PostMapping(value = "/insert")
-	public ResponseEntity<?> getStudent(@RequestBody final Student n1){
+	public ResponseEntity<?> putStudent(@RequestBody final Student n1){
 		StudentRepo.save(n1);
 		return ResponseEntity
 				.status(HttpStatus.OK)
